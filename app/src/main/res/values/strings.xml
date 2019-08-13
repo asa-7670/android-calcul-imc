@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Calcul IMC</string>
+    <string name="poids_label">Poids :</string>
+    <string name="taille_label">Taille :</string>
+    <string name="metre_type_label">Mètre</string>
+    <string name="centimetre_type_label">Centimètre</string>
+    <string name="poids_hint_label">Poids</string>
+    <string name="taille_hint_label">Taille</string>
+    <string name="mega_fonction_label">Mega fonction !</string>
+    <string name="calcul_imc_btn_label">Calcul l\'IMC</string>
+    <string name="raz_btn_view">Raz</string>
+    <string name="resultat_label">Résultat :</string>
+    <string name="info_label">Vous devez cliquer sur le buton Calculer l\'IMC pour obtenir un résultat.</string>
+</resources>

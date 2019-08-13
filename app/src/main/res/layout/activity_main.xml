@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/small_margin"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/poids_label_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/poids_label"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_medium_size"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/poids_edt_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/poids_hint_label"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/taille_label_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/taille_label"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="@dimen/text_medium_size"/>
+
+    <EditText
+        android:id="@+id/taille_edt_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/taille_hint_label"
+        android:inputType="numberDecimal" />
+
+    <RadioGroup
+        android:id="@+id/type_rg_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/metre_rb_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/metre_type_label"
+            android:textSize="@dimen/text_medium_size"/>
+
+        <RadioButton
+            android:id="@+id/centimetre_rb_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/centimetre_type_label"
+            android:checked="true"
+            android:textSize="@dimen/text_medium_size"/>
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/mega_function_cb_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mega_fonction_label"
+        android:checked="false"
+        android:textSize="@dimen/text_medium_size"/>
+
+    <Button
+        android:id="@+id/calcul_btn_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calcul_imc_btn_label" />
+
+    <Button
+        android:id="@+id/raz_btn_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/raz_btn_view" />
+
+    <TextView
+        android:id="@+id/resultat_label_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/resultat_label"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/text_medium_size"/>
+
+    <TextView
+        android:id="@+id/info_label_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/info_label"
+        android:textSize="@dimen/text_medium_size"/>
+</LinearLayout>

@@ -7,54 +7,78 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/poids_label_view"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/poids_label"
-        android:textColor="@color/colorAccent"
-        android:textStyle="bold"
-        android:textSize="@dimen/text_medium_size"
-        android:gravity="center"/>
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+        <TextView
+            android:id="@+id/poids_label_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/poids_label"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_medium_size"
+            android:gravity="right"
+            android:layout_weight="30"/>
 
-    <EditText
-        android:id="@+id/poids_edt_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/poids_hint_label"
-        android:inputType="numberDecimal" />
+        <EditText
+            android:id="@+id/poids_edt_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/poids_hint_label"
+            android:inputType="numberDecimal"
+            android:layout_weight="70"
+            android:gravity="left"/>
 
-    <TextView
-        android:id="@+id/taille_label_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/taille_label"
-        android:textColor="@color/colorAccent"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:textSize="@dimen/text_medium_size"/>
+    </LinearLayout>
 
-    <EditText
-        android:id="@+id/taille_edt_view"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/taille_hint_label"
-        android:inputType="numberDecimal" />
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/taille_label_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/taille_label"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_medium_size"
+            android:layout_weight="30"
+            android:gravity="right"/>
+
+        <EditText
+            android:id="@+id/taille_edt_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/taille_hint_label"
+            android:inputType="numberDecimal"
+            android:layout_weight="70"
+            android:gravity="left"/>
+
+    </LinearLayout>
+
 
     <RadioGroup
         android:id="@+id/type_rg_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+       >
 
         <RadioButton
             android:id="@+id/metre_rb_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/metre_type_label"
-            android:textSize="@dimen/text_medium_size"/>
+            android:textSize="@dimen/text_medium_size"
+            android:padding="@dimen/small_padding"/>
 
         <RadioButton
             android:id="@+id/centimetre_rb_view"
@@ -62,7 +86,8 @@
             android:layout_height="wrap_content"
             android:text="@string/centimetre_type_label"
             android:checked="true"
-            android:textSize="@dimen/text_medium_size"/>
+            android:textSize="@dimen/text_medium_size"
+            android:padding="@dimen/small_padding"/>
 
     </RadioGroup>
 
@@ -72,19 +97,30 @@
         android:layout_height="wrap_content"
         android:text="@string/mega_fonction_label"
         android:checked="false"
-        android:textSize="@dimen/text_medium_size"/>
+        android:textSize="@dimen/text_medium_size"
+        android:padding="@dimen/small_padding"/>
 
-    <Button
-        android:id="@+id/calcul_btn_view"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/calcul_imc_btn_label" />
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:padding="@dimen/small_padding">
+        <Button
+            android:id="@+id/calcul_btn_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/calcul_imc_btn_label"
+            android:layout_weight="90"/>
 
-    <Button
-        android:id="@+id/raz_btn_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/raz_btn_view" />
+        <Button
+            android:id="@+id/raz_btn_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/raz_btn_view"
+            android:layout_weight="10"/>
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/resultat_label_view"
@@ -93,12 +129,14 @@
         android:text="@string/resultat_label"
         android:textStyle="bold"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="@dimen/text_medium_size"/>
+        android:textSize="@dimen/text_medium_size"
+        android:padding="@dimen/small_padding"/>
 
     <TextView
         android:id="@+id/info_label_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/info_label"
-        android:textSize="@dimen/text_medium_size"/>
+        android:textSize="@dimen/text_medium_size"
+        android:padding="@dimen/small_padding"/>
 </LinearLayout>
